@@ -1,7 +1,9 @@
 import cv2
+import os
+path = os.path.dirname(__file__)
 
-faceCascade= cv2.CascadeClassifier("Resources/haarcascade_frontalface_default.xml")
-img = cv2.imread('Resources/lena.png')
+faceCascade= cv2.CascadeClassifier(path+"/Resources/haarcascade_frontalface_default.xml")
+img = cv2.imread(path + '/Resources/lena.png')
 imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
 faces = faceCascade.detectMultiScale(imgGray,1.1,4)
