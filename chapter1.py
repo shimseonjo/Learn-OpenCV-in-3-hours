@@ -1,7 +1,9 @@
+import os
+path = os.path.dirname(__file__)
 ######################## READ IMAGE ############################
 # import cv2
 # # LOAD AN IMAGE USING 'IMREAD'
-# img = cv2.imread("Resources/lena.png")
+# img = cv2.imread(path+"/Resources/lena.png")
 # # DISPLAY
 # cv2.imshow("Lena Soderberg",img)
 # cv2.waitKey(0)
@@ -10,7 +12,7 @@
 # import cv2
 # frameWidth = 640
 # frameHeight = 480
-# cap = cv2.VideoCapture("Resources/test_ video.mp4")
+# cap = cv2.VideoCapture(path+"/Resources/test_ video.mp4")
 # while True:
 #     success, img = cap.read()
 #     img = cv2.resize(img, (frameWidth, frameHeight))
@@ -24,6 +26,7 @@ frameHeight = 480
 cap = cv2.VideoCapture(0)
 cap.set(3, frameWidth)
 cap.set(4, frameHeight)
+#밝기
 cap.set(10,150)
 while True:
     success, img = cap.read()
